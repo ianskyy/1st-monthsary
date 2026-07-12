@@ -448,8 +448,9 @@
     .photo-placeholder-icon {
       font-size: 3.2rem;
       opacity: 0.6;
-
     }
+
+    /* No caption - removed completely */
 
     .love-note {
       text-align: center;
@@ -518,13 +519,13 @@
 </div>
 <div class="page-num" id="pageNum">❤️ Welcome</div>
 
-<!-- ===== PAGE 1 - CLEAN & CENTERED (no vinyl, no music, no flower box) ===== -->
+<!-- ===== PAGE 1 - CLEAN & CENTERED ===== -->
 <div class="page active" id="page1">
   <div class="greeting-card">
     <div class="greeting-title">Hi, my baby!</div>
     <div class="greeting-sub">❤️ Happy 1st Monthsary! ❤️</div>
 
-    <!-- Her photo - clean, centered, no flower box -->
+    <!-- Her photo - clean, centered -->
     <div class="her-photo-wrapper">
       <img id="herPhoto" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='90' fill='%23ffdbb5'/%3E%3Ctext x='100' y='130' text-anchor='middle' fill='%238b5a2b' font-size='70'%3E🌸%3C/text%3E%3C/svg%3E" alt="Her photo">
     </div>
@@ -597,7 +598,7 @@ Your person 🌙</div>
   <button class="btn-back" onclick="goTo('page2')">🌸 Back to gifts</button>
 </div>
 
-<!-- PAGE 5 - PHOTO BOOTH -->
+<!-- PAGE 5 - PHOTO BOOTH (NO CAPTIONS) -->
 <div class="page" id="page5">
   <div class="cute-photobooth">
     <div class="photobooth-header">
@@ -657,7 +658,7 @@ Your person 🌙</div>
     }
   }
 
-  // ---------- PHOTO BOOTH ----------
+  // ---------- PHOTO BOOTH - NO CAPTIONS ----------
   const photoList = [
     { src: "first.JPG" },
     { src: "baby2.jpg" },
@@ -692,12 +693,9 @@ Your person 🌙</div>
       };
       photoDiv.appendChild(img);
       
-      const captionSpan = document.createElement('div');
-      captionSpan.className = 'photo-caption';
-      captionSpan.innerText = item.caption;
+      // No caption element - removed completely
       
       card.appendChild(photoDiv);
-      card.appendChild(captionSpan);
       gridContainer.appendChild(card);
     });
   }
@@ -733,7 +731,7 @@ Your person 🌙</div>
   ★ PHOTO BOOTH "Our Pics":
     Find the "photoList" array in the <script> section.
     Replace the "src" values with your own image file names.
-    Example: { src: "us_cute.jpg", caption: "Our first date ❤️" }
+    Example: { src: "us_cute.jpg" }
     Add more objects to add more photos.
 -->
 </body>
